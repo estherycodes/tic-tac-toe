@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Title</title>
+  <title>Tic Tac Toe</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -16,10 +16,33 @@
 
 <body>
   <header>
-    <!-- place navbar here -->
+    <div class="container">
+        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+          <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+            <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+            <span class="fs-4">Tic Tac Toe</span>
+          </a>
+    
+          <ul class="nav nav-pills">
+            <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Rules</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+          </ul>
+        </header>
+      </div>
   </header>
   <main>
-
+    <div class="gameBoard">
+        <div class="box" data-index="0"></div>
+        <div class="box" data-index="1"></div>
+        <div class="box" data-index="2"></div>
+        <div class="box" data-index="3"></div>
+        <div class="box" data-index="4"></div>
+        <div class="box" data-index="5"></div>
+        <div class="box" data-index="6"></div>
+        <div class="box" data-index="7"></div>
+        <div class="box" data-index="8"></div>
+    </div>
   </main>
   <footer>
     <!-- place footer here -->

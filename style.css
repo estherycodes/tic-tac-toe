@@ -1,0 +1,58 @@
+:root {
+    --border: 5px solid hotpink;
+}
+
+.fs-4 {
+    color: black;
+}
+
+.box {
+    padding: 0px;
+    margin: 0px;
+    width: 200px;
+    height: 200px;
+}
+
+.gameBoard {
+    display: flex;
+    flex-wrap: wrap;
+    width: 600px;
+    height: 600px;
+    margin: 0 auto;
+}
+
+.gameBoard :nth-child(1) {
+    border-bottom: var(--border);
+    border-right: var(--border);
+}
+
+.gameBoard :nth-child(2) {
+    border-bottom: var(--border);
+    border-right: var(--border);
+}
+
+.gameBoard :nth-child(3) {
+    border-bottom: var(--border);
+}
+
+.gameBoard :nth-child(4) {
+    border-bottom: var(--border);
+    border-right: var(--border);
+}
+
+.gameBoard :nth-child(5) {
+    border-bottom: var(--border);
+    border-right: var(--border);
+}
+
+.gameBoard :nth-child(6) {
+    border-bottom: var(--border);
+}
+
+.gameBoard :nth-child(7) {
+    border-right: var(--border);
+}
+
+.gameBoard :nth-child(8) {
+    border-right: var(--border);
+}
