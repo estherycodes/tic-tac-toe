@@ -16,33 +16,46 @@
 
 <body>
   <header>
-    <div class="container">
-        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
-          <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-            <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
-            <span class="fs-4">Tic Tac Toe</span>
-          </a>
-    
-          <ul class="nav nav-pills">
-            <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Rules</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">About</a></li>
-          </ul>
-        </header>
-      </div>
+    <!-- place header here -->
   </header>
   <main>
-    <div class="gameBoard">
-        <div class="box" data-index="0"></div>
-        <div class="box" data-index="1"></div>
-        <div class="box" data-index="2"></div>
-        <div class="box" data-index="3"></div>
-        <div class="box" data-index="4"></div>
-        <div class="box" data-index="5"></div>
-        <div class="box" data-index="6"></div>
-        <div class="box" data-index="7"></div>
-        <div class="box" data-index="8"></div>
-    </div>
+    <section class="sidebar">
+        <div class="sidebar__title">
+            <h1>Tic Tac Toe</h1>
+            <p>Enter the player name before you start!</p>
+        </div>
+        <form class="player_input">
+            <div class="input">
+                <p class="symbol">X</p>
+                <label for="player1_name" class="name">Player 1 Name</label>
+                <input type="text" class="textbox">
+            </div>
+            
+            <div class="input">
+                <p class="symbol">O</p>
+                <label for="player2_name" class="name">Player 2 Name</label>
+                <input type="text" class="textbox" id="p2">
+            </div>
+
+            <div class="computer">
+                <input type="checkbox" name="computer" id="computer">
+                <label for="computer">Play against computer?</label>
+            </div>
+        </form>
+    </section>
+    <section class="gameArea">
+        <div class="gameBoard">
+            <div class="box" data-index="0"></div>
+            <div class="box" data-index="1"></div>
+            <div class="box" data-index="2"></div>
+            <div class="box" data-index="3"></div>
+            <div class="box" data-index="4"></div>
+            <div class="box" data-index="5"></div>
+            <div class="box" data-index="6"></div>
+            <div class="box" data-index="7"></div>
+            <div class="box" data-index="8"></div>
+        </div>
+    </section>
   </main>
   <footer>
     <!-- place footer here -->
