@@ -28,7 +28,7 @@
             <div class="input">
                 <p class="symbol">X</p>
                 <label for="player1_name" class="name">Player 1 Name</label>
-                <input type="text" class="textbox">
+                <input type="text" class="textbox" id="p1">
             </div>
             
             <div class="input">
@@ -38,8 +38,12 @@
             </div>
 
             <div class="computer">
-                <input type="checkbox" name="computer" id="computer">
                 <label for="computer">Play against computer?</label>
+                <input type="checkbox" name="computer" id="computer">
+            </div>
+
+            <div>
+                <button type="submit" class="btn btn-primary">Start Game</button>
             </div>
         </form>
     </section>
@@ -55,6 +59,7 @@
             <div class="box" data-index="7"></div>
             <div class="box" data-index="8"></div>
         </div>
+        <button class="btn btn-primary" id="reset">Reset Game</button>
     </section>
   </main>
   <footer>

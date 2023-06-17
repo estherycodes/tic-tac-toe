@@ -33,6 +33,13 @@ main {
     display: grid;
     gap: 4vh;
     margin: 10vh 0vh 0vh 0vh;
+    justify-items: end;
+}
+
+.btn {
+    margin-left: 2vw;
+    height: 5vh;
+    width: 10vw;
 }
 
 .input {
@@ -65,7 +72,7 @@ main {
 
 .computer {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr;
 }
 
@@ -74,10 +81,17 @@ main {
     margin: 0px;
     width: 150px;
     height: 150px;
-    font-size: 50pt;
+    font-size: 100pt;
     text-align: center;
     line-height: 150px;
-    color: purple;
+    color: black;
+    background-color: antiquewhite;
+    box-shadow: 2px 2px 5px 1px lightgray;  
+}
+
+.box:hover {
+    background-color: rgb(255, 234, 234);
+    color: black;
 }
 
 .gameArea {
@@ -85,6 +99,22 @@ main {
     align-self: center;
     justify-self: center;
     height: 75vh;
+}
+
+#reset {
+    position: absolute;
+    top: 63vh;
+    left: 45vw;
+    background-color: antiquewhite;
+    border: 2px solid antiquewhite;
+    color: black;
+    box-shadow: 2px 2px 5px 1px lightgray;
+}
+
+#reset:hover {
+    background-color: rgb(255, 234, 234);
+    border: 2px solid rgb(255, 234, 234);
+    color: black;
 }
 
 .gameBoard {
