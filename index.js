@@ -20,20 +20,47 @@ const gameBoard = () => {
   };
 };
 
+gameBoard();
+
 // get players from form
-const getPlayers = () => {
-  const player1Name = document.getElementById('p1').value || 'Player 1';
-  const player2Name = document.getElementById('p2').value || 'Player 2';
-  const isComputer = document.getElementById('computer').checked;
+function getPlayers() {
+  // submit button
+  const submitBtn = document.querySelector('#submit');
+  let isComputer = false;
 
-  const player1 = { name: player1Name, symbol: 'X', getSymbol: () => 'X' };
-  const player2 = isComputer ? { name: 'Computer', symbol: 'O', getSymbol: () => 'O' } : { name: player2Name, symbol: 'O', getSymbol: () => 'O' };
+  document.querySelector('#computer').addEventListener('change', function () {
+    if (this.checked) {
+      document.querySelector('#p2').disabled = true;
+      isComputer = true;
+    } else {
+      document.querySelector('#p2').enabled = true;
+      isComputer = false;
+    }
+  });
 
-  const board = gameBoard();
+  submitBtn.addEventListener('click', (event) => {
+    event.preventDefault();
+    const player1Name = document.getElementById('p1').value || 'Player 1';
+    const player2Name = document.getElementById('p2').value || 'Player 2';
+    // isComputer = document.getElementById('computer').checked;
 
-  const startGame = () => {
-    board.createBoard();
-  };
+    const player1 = { name: player1Name, symbol: 'X', getSymbol: () => 'X' };
+    const player2 = isComputer ? { name: 'Computer', symbol: 'O', getSymbol: () => 'O' } : { name: player2Name, symbol: 'O', getSymbol: () => 'O' };
+
+    const gameArea = document.getElementsByClassName('gameArea')[0];
+    const playerDeclaration = document.createElement('h1');
+    gameArea.insertBefore(playerDeclaration, gameArea.childNodes[0]);
+    playerDeclaration.textContent = `${player1.name} vs ${player2.name}`;
+  });
+}
+
+getPlayers();
+
+function startGame() {
+  const gameArea = document.getElementsByClassName('gameArea');
+  const playerRound = document.createElement('h1');
+  gameArea.insertBefore(playerRound, gameArea.childNodes[1]);
+  playerRound.textContent = `${player1.name}'s turn`;
 
   const getBoard = () => board.getBoard();
 
@@ -49,6 +76,9 @@ const getPlayers = () => {
     startGame, getBoard, updateBoard, resetBoard, player1, player2,
   };
 };
+
+startGame();
+/*
 
 // Create display controller - DOM manipulation module - module pattern
 const displayController = (() => {
@@ -195,7 +225,8 @@ function gameLogic() {
 
 gameLogic();
 
-// Once player 1 has made a move, player 2 or computer can make a move and player 1 cannot make another move until player 2 or computer has made a move
+// Once player 1 has made a move, player 2 or computer can make a move
+// and player 1 cannot make another move until player 2 or computer has made a move
 function playerTurn() {
   const game = gameController();
   const boxes = document.querySelectorAll('.box');
@@ -209,3 +240,4 @@ function playerTurn() {
 }
 
 playerTurn();
+*/

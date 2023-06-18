@@ -103,8 +103,8 @@ main {
 
 #reset {
     position: absolute;
-    top: 63vh;
-    left: 45vw;
+    top: 2vh;
+    left: 32vw;
     background-color: antiquewhite;
     border: 2px solid antiquewhite;
     color: black;
