@@ -80,7 +80,7 @@ function startGame() {
 };
 
 startGame();
-/*
+
 
 // Create display controller - DOM manipulation module - module pattern
 const displayController = (() => {
