@@ -6,7 +6,7 @@ main {
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 1fr;
-    margin: 0vh 5vw 0vh 0vw;
+    margin: 0vh 0vw 0vh 0vw;
 }
 
 .sidebar {
@@ -96,9 +96,11 @@ main {
 
 .gameArea {
     display: grid;
-    align-self: center;
     justify-self: center;
-    height: 75vh;
+    height: 65vh;
+    width: 50vw;
+    align-items: center;
+    justify-items: center;  
 }
 
 #reset {

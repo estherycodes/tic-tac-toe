@@ -51,6 +51,8 @@ function getPlayers() {
     const playerDeclaration = document.createElement('h1');
     gameArea.insertBefore(playerDeclaration, gameArea.childNodes[0]);
     playerDeclaration.textContent = `${player1.name} vs ${player2.name}`;
+
+    startGame(player1, player2);
   });
 }
 
@@ -58,7 +60,7 @@ getPlayers();
 
 function startGame() {
   const gameArea = document.getElementsByClassName('gameArea');
-  const playerRound = document.createElement('h1');
+  const playerRound = document.createElement('p');
   gameArea.insertBefore(playerRound, gameArea.childNodes[1]);
   playerRound.textContent = `${player1.name}'s turn`;
 
